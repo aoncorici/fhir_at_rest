@@ -1202,8 +1202,7 @@ class FhirRequest with _$FhirRequest {
                     (this as FhirOperationRequest).fhirParameter != null
                 ? RestfulRequest.post_
                 : RestfulRequest.get_,
-            (this as FhirOperationRequest).usePost ||
-                    (this as FhirOperationRequest).fhirParameter != null
+            (this as FhirOperationRequest).fhirParameter != null
                 ? url
                 : uri(parameters: parameters),
             headers,
